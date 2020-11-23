@@ -1,0 +1,4 @@
+.DS_Store
+./codechef/*/*.class
+./companies/*/*/*.class
+./Hacker_Rank_problems/*/*.class

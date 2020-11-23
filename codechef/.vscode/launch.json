@@ -1,0 +1,68 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Ideone",
+            "request": "launch",
+            "mainClass": "Ideone"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-cash",
+            "request": "launch",
+            "mainClass": "cash"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-catfeed",
+            "request": "launch",
+            "mainClass": "catfeed"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-distributeApples",
+            "request": "launch",
+            "mainClass": "distributeApples"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-fiboeasy",
+            "request": "launch",
+            "mainClass": "fiboeasy"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-snug_fit",
+            "request": "launch",
+            "mainClass": "snug_fit"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-theater",
+            "request": "launch",
+            "mainClass": "theater"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-triples",
+            "request": "launch",
+            "mainClass": "triples"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-watchfb",
+            "request": "launch",
+            "mainClass": "watchfb"
+        }
+    ]
+}
