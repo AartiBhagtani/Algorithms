@@ -5,7 +5,7 @@ class Node:
     self.val = data
     self.left = None
     self.right = None
-  
+max_val = -1  
 def print_left_view(node, curr, max_val):
   if node is None:
     return
