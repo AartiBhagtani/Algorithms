@@ -1,67 +1,37 @@
-# Bottom View of tree
+# https://www.geeksforgeeks.org/bottom-view-binary-tree/
 
+# In O(nlogn) time
 class Node:
   def __init__(self, data):
     self.val = data
     self.left = None
     self.right = None
-  
-def print_right_view(node):
-  stack = []
-  stack.append(node)
-  while len(stack) > 0 :
-    size_arr = len(stack)
-    print(stack[-1].val)
-    while size_arr > 0 :
-      # if size_arr == len(stack):
-      #   print(ele[-1].val)
-      ele = stack.pop(0)
-      if ele.left:
-        stack.append(ele.left)
-      if ele.right:
-        stack.append(ele.right)
-      size_arr = size_arr - 1
 
-root = Node(1)
-root.left = Node(2)
+hm = dict()
+def generate_bottom_view_nodes(node, hd, level):
+  if node is None:
+    return
+  if hd in hm:
+    if level >= hm[hd][1]:
+      hm[hd] = [node.val, level]
+  else:
+      hm[hd] = [node.val, level]
+  generate_bottom_view_nodes(node.left, hd-1, level+1)
+  generate_bottom_view_nodes(node.right, hd+1, level+1)
+
+
+def print_bottom_order(node):
+  generate_bottom_view_nodes(node, 0, 0)
+  for index, key in enumerate(sorted(hm)):
+    print(hm[key][0], end = ' ')
+
+root = Node(20)
+root.left = Node(8)
+root.right = Node(22)
 root.left.left = Node(5)
-root.left.right = Node(7)
-root.right = Node(3)
-root.right.right = Node(10)
-root.right.right.left = Node(11)
-# root.right.right.right = Node(12)
-print_right_view(root)
-# print level order traversal
-# problem 4.3
-
-class Node:
-  def __init__(self, data):
-    self.val = data
-    self.left = None
-    self.right = None
-  
-def print_bottom_view(node):
-  stack = []
-  stack.append(node)
-  while len(stack) > 0 :
-    size_arr = len(stack)
-    print(stack[-1].val)
-    while size_arr > 0 :
-      # if size_arr == len(stack):
-      #   print(ele[-1].val)
-      ele = stack.pop(0)
-      if ele.left:
-        stack.append(ele.left)
-      if ele.right:
-        stack.append(ele.right)
-      size_arr = size_arr - 1
-
-root = Node(1)
-root.left = Node(2)
-root.left.left = Node(5)
-root.left.right = Node(7)
-root.right = Node(3)
-root.right.right = Node(10)
-root.right.right.left = Node(11)
-# root.right.right.right = Node(12)
-print_bottom_view(root)
+root.left.right = Node(3)
+root.right.left = Node(4)
+root.right.right = Node(25)
+root.left.right.left = Node(10)
+root.left.right.right = Node(14)
+print_bottom_order(root)
