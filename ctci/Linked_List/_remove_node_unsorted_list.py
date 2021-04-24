@@ -1,5 +1,5 @@
-# remove duplicates from sorted LL completely print only remaining distinct elements
-# https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/
+# ----NOT DONE
+
 class Node:
   def __init__(self, data):
     self.data = data
