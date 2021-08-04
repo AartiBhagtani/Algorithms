@@ -4,7 +4,7 @@
 
 class Node:
   def __init__(self, data):
-    self.data = data
+    self.data = data  
     self.next = None
 
 def find_mid(head):
@@ -56,7 +56,7 @@ def printLinkedlist(node):
     print(node.data)
     node = node.next
 
-one = Node(1)
+one = Node(1)   
 two = Node(0)
 three = Node(3)
 four = Node(4)
